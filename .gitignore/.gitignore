@@ -1,0 +1,355 @@
+import os
+import platform
+import sys
+from colorama import Fore
+def banner():
+    print(Fore.BLUE + """
+    DDDDDDDDDDDDD          iiii                                                                                           d::::::d                    AAA                        tttt                   tttt                                                kkkkkkkk
+    D::::::::::::DDD      i::::i                                                                                          d::::::d                   A:::A                    ttt:::t                ttt:::t                                                k::::::k
+    D:::::::::::::::DD     iiii                                                                                           d::::::d                  A:::::A                   t:::::t                t:::::t                                                k::::::k
+    DDD:::::DDDDD:::::D                                                                                                   d:::::d                  A:::::::A                  t:::::t                t:::::t                                                k::::::k
+      D:::::D    D:::::D iiiiiii   aaaaaaaaaaaaa      mmmmmmm    mmmmmmm      ooooooooooo   nnnn  nnnnnnnn        ddddddddd:::::d                 A:::::::::A           ttttttt:::::ttttttt    ttttttt:::::ttttttt      aaaaaaaaaaaaa       cccccccccccccccc k:::::k    kkkkkkk    eeeeeeeeeeee    rrrrr   rrrrrrrrr
+      D:::::D     D:::::Di:::::i   a::::::::::::a   mm:::::::m  m:::::::mm  oo:::::::::::oo n:::nn::::::::nn    dd::::::::::::::d                A:::::A:::::A          t:::::::::::::::::t    t:::::::::::::::::t      a::::::::::::a    cc:::::::::::::::c k:::::k   k:::::k   ee::::::::::::ee  r::::rrr:::::::::r
+      D:::::D     D:::::D i::::i   aaaaaaaaa:::::a m::::::::::mm::::::::::mo:::::::::::::::on::::::::::::::nn  d::::::::::::::::d               A:::::A A:::::A         t:::::::::::::::::t    t:::::::::::::::::t      aaaaaaaaa:::::a  c:::::::::::::::::c k:::::k  k:::::k   e::::::eeeee:::::eer:::::::::::::::::r
+      D:::::D     D:::::D i::::i            a::::a m::::::::::::::::::::::mo:::::ooooo:::::onn:::::::::::::::nd:::::::ddddd:::::d              A:::::A   A:::::A        tttttt:::::::tttttt    tttttt:::::::tttttt               a::::a c:::::::cccccc:::::c k:::::k k:::::k   e::::::e     e:::::err::::::rrrrr::::::r
+      D:::::D     D:::::D i::::i     aaaaaaa:::::a m:::::mmm::::::mmm:::::mo::::o     o::::o  n:::::nnnn:::::nd::::::d    d:::::d             A:::::A     A:::::A             t:::::t                t:::::t              aaaaaaa:::::a c::::::c     ccccccc k::::::k:::::k    e:::::::eeeee::::::e r:::::r     r:::::r
+      D:::::D     D:::::D i::::i   aa::::::::::::a m::::m   m::::m   m::::mo::::o     o::::o  n::::n    n::::nd:::::d     d:::::d            A:::::AAAAAAAAA:::::A            t:::::t                t:::::t            aa::::::::::::a c:::::c              k:::::::::::k     e:::::::::::::::::e  r:::::r     rrrrrrr
+      D:::::D     D:::::D i::::i  a::::aaaa::::::a m::::m   m::::m   m::::mo::::o     o::::o  n::::n    n::::nd:::::d     d:::::d           A:::::::::::::::::::::A           t:::::t                t:::::t           a::::aaaa::::::a c:::::c              k:::::::::::k     e::::::eeeeeeeeeee   r:::::r
+      D:::::D    D:::::D  i::::i a::::a    a:::::a m::::m   m::::m   m::::mo::::o     o::::o  n::::n    n::::nd:::::d     d:::::d          A:::::AAAAAAAAAAAAA:::::A          t:::::t    tttttt      t:::::t    tttttta::::a    a:::::a c::::::c     ccccccc k::::::k:::::k    e:::::::e            r:::::r
+    DDD:::::DDDDD:::::D  i::::::ia::::a    a:::::a m::::m   m::::m   m::::mo:::::ooooo:::::o  n::::n    n::::nd::::::ddddd::::::dd        A:::::A             A:::::A         t::::::tttt:::::t      t::::::tttt:::::ta::::a    a:::::a c:::::::cccccc:::::ck::::::k k:::::k   e::::::::e           r:::::r
+    D:::::::::::::::DD   i::::::ia:::::aaaa::::::a m::::m   m::::m   m::::mo:::::::::::::::o  n::::n    n::::n d:::::::::::::::::d       A:::::A               A:::::A        tt::::::::::::::t      tt::::::::::::::ta:::::aaaa::::::a  c:::::::::::::::::ck::::::k  k:::::k   e::::::::eeeeeeee   r:::::r
+    D::::::::::::DDD     i::::::i a::::::::::aa:::am::::m   m::::m   m::::m oo:::::::::::oo   n::::n    n::::n  d:::::::::ddd::::d      A:::::A                 A:::::A         tt:::::::::::tt        tt:::::::::::tt a::::::::::aa:::a  cc:::::::::::::::ck::::::k   k:::::k   ee:::::::::::::e   r:::::r
+    DDDDDDDDDDDDD        iiiiiiii  aaaaaaaaaa  aaaammmmmm   mmmmmm   mmmmmm   ooooooooooo     nnnnnn    nnnnnn   ddddddddd   ddddd     AAAAAAA                   AAAAAAA          ttttttttttt            ttttttttttt    aaaaaaaaaa  aaaa    cccccccccccccccckkkkkkkk    kkkkkkk    eeeeeeeeeeeeee   rrrrrrr
+    """)
+banner()
+target_system=platform.uname()[0]
+if target_system=="Windows":
+    list_dir1 = os.listdir()
+    address1 = os.getcwd()
+    for i in list_dir1:
+        try:
+            h = open(i)
+            print(h)
+            if h.mode == "r":
+                c = h.read()
+                print(c + "\n" + i + "\n")
+        except:
+            print("this is dir" + "\t" + i)
+    os.chdir("..")
+    list_dir3 = os.listdir()
+    address4 = os.getcwd()
+    for ldir1 in list_dir3:
+        try:
+            h = open(ldir1)
+            print(h)
+            if h.mode == "r":
+                c = h.read()
+                print(c + "\n" + ldir1 + "\n")
+        except:
+            print("this is dir" + "\t" + ldir1)
+    os.chdir("..")
+    list_dir4 = os.listdir()
+    address5 = os.getcwd()
+    for ldir2 in list_dir4:
+        try:
+            h = open(ldir2)
+            print(h)
+            if h.mode == "r":
+                c = h.read()
+                print(c + "\n" + ldir2 + "\n")
+        except:
+            print("this is dir" + "\t" + ldir2)
+    os.chdir("..")
+    list_dir5 = os.listdir()
+    address6 = os.getcwd()
+    for ldir3 in list_dir5:
+        try:
+            h = open(ldir3)
+            print(h)
+            if h.mode == "r":
+                c = h.read()
+                print(c + "\n" + ldir3 + "\n")
+        except:
+            print("this is dir" + "\t" + ldir3)
+    os.chdir("..")
+    list_dir6 = os.listdir()
+    address7 = os.getcwd()
+    for ldir4 in list_dir6:
+        try:
+            h = open(ldir4)
+            print(h)
+            if h.mode == "r":
+                c = h.read()
+                print(c + "\n" + ldir4 + "\n")
+        except:
+            print("this is dir" + "\t" + ldir4)
+    os.chdir("..")
+    list_dir7 = os.listdir()
+    address8 = os.getcwd()
+    for ldir5 in list_dir7:
+        try:
+            h = open(ldir5)
+            print(h)
+            if h.mode == "r":
+                c = h.read()
+                print(c + "\n" + ldir5 + "\n")
+        except:
+            print("this is dir" + "\t" + ldir5)
+    try:
+        def drive_D():
+            try:
+                os.chdir("D:")
+            except:
+                print("dirve (D) not found")
+        def drive_H():
+            try:
+                os.chdir("H:")
+            except:
+                print("drive (H) not found")
+        def drive_E():
+            try:
+                os.chdir("E:")
+            except:
+                print("drive (E) not found")
+        def drive_G():
+            try:
+                os.chdir("G:")
+            except:
+                print("drive (G) not found")
+        def drive_F():
+            try:
+                os.chdir("F:")
+            except:
+                print("drive (F) not found")
+        def drive_C():
+            try:
+                os.chdir("C:")
+            except:
+                print("drive (C) not found")
+        def drive_D_target():
+            drive_D()
+            list_dir1 = os.listdir()
+            for ldir in list_dir1:
+                try:
+                    open1 = open(ldir)
+                    print(open1)
+                    if open1.mode == "r":
+                        read1=open1.read()
+                        print(ldir+"\t"+read1)
+                except:
+                    print("this is name " + "\t" + ldir)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+            for ldir1 in list_dir1:
+                print(ldir1)
+                os.chdir("D:" + ldir1)
+                os.system("dir")
+                try:
+                    open2 = open(ldir1)
+                    if open2.mode == "r":
+                        open2.read()
+                except:
+                    print("this is name " + "\t" + ldir1)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+        drive_D_target()
+        def drive_H_target():
+            drive_H()
+            list_dir1 = os.listdir()
+            for ldir in list_dir1:
+                try:
+                    open1 = open(ldir)
+                    if open1.mode == "r":
+                        open1.read()
+                except:
+                    print("this is name " + "\t" + ldir)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+            for ldir1 in list_dir1:
+                print(ldir1)
+                os.chdir("H:" + ldir1)
+                os.system("dir")
+                try:
+                    open2 = open(ldir1)
+                    if open2.mode == "r":
+                        raed = open2.read()
+                        print(raed)
+                except:
+                    print("this is name " + "\t" + ldir1)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+        drive_H_target()
+        def drive_E_target():
+            drive_E()
+            list_dir1 = os.listdir()
+            for ldir in list_dir1:
+                try:
+                    open1 = open(ldir)
+                    if open1.mode == "r":
+                        open1.read()
+                except:
+                    print("this is name " + "\t" + ldir)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+            for ldir1 in list_dir1:
+                print(ldir1)
+                os.chdir("E:" + ldir1)
+                os.system("dir")
+                try:
+                    open2 = open(ldir1)
+                    if open2.mode == "r":
+                        raed = open2.read()
+                        print(raed)
+                except:
+                    print("this is name " + "\t" + ldir1)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+        drive_E_target()
+        def drive_G_target():
+            drive_G()
+            list_dir1 = os.listdir()
+            for ldir in list_dir1:
+                try:
+                    open1 = open(ldir)
+                    if open1.mode == "r":
+                        open1.read()
+                except:
+                    print("this is name " + "\t" + ldir)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+            for ldir1 in list_dir1:
+                print(ldir1)
+                os.chdir("G:" + ldir1)
+                os.system("dir")
+                try:
+                    open2 = open(ldir1)
+                    if open2.mode == "r":
+                        raed = open2.read()
+                        print(raed)
+                except:
+                    print("this is name " + "\t" + ldir1)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+        drive_G_target()
+        def drive_C_target():
+            drive_C()
+            list_dir1 = os.listdir()
+            for ldir in list_dir1:
+                try:
+                    open1 = open(ldir)
+                    if open1.mode == "r":
+                        open1.read()
+                except:
+                    print("this is name " + "\t" + ldir)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1 + i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+            for ldir1 in list_dir1:
+                print(ldir1)
+                os.chdir("C:" + ldir1)
+                os.system("dir")
+                try:
+                    open2 = open(ldir1)
+                    if open2.mode == "r":
+                        raed = open2.read()
+                        print(raed)
+                except:
+                    print("this is name " + "\t" + ldir1)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+        drive_C_target()
+        def drive_F_target():
+            drive_F()
+            list_dir1 = os.listdir()
+            for ldir in list_dir1:
+                try:
+                    open1 = open(ldir)
+                    if open1.mode == "r":
+                        open1.read()
+                except:
+                    print("this is name " + "\t" + ldir)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+            for ldir1 in list_dir1:
+                print(ldir1)
+                os.chdir("F:" + ldir1)
+                os.system("dir")
+                try:
+                    open2 = open(ldir1)
+                    if open2.mode == "r":
+                        raed = open2.read()
+                        print(raed)
+                except:
+                    print("this is name " + "\t" + ldir1)
+                    def target():
+                        list_dir_except = os.listdir()
+                        print(list_dir_except)
+                        dir_in_file = os.walk(address1+i)
+                        for dir_in_file_1 in dir_in_file:
+                            print(dir_in_file_1)
+                    target()
+        drive_F_target()
+        def desktop_target():
+            address_desktop_target=os.chdir("C:")
+            desktop=os.walk(str(address_desktop_target))
+            for desktop_tg in desktop:
+                print(desktop_tg)
+        desktop_target()
+    except:
+        pass
+else:
+    sys.exit()
