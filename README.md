@@ -1,11 +1,7 @@
 # Diamond-Attacker
 #Diamond Attacker is a powerful spyware that is only available for Windows operating system in version 1
 #In version 2, God willing, this spyware connects to the Telegram bot and sends the photos and all types of files to the hacker without reading them. Know that they do not execute #this code file on the computer. It does not happen to you
-
-
-
-
-#   DDDDDDDDDDDDD          iiii                                                                                           d::::::d                    AAA                        tttt                   tttt                                                kkkkkkkk
+#   
     D::::::::::::DDD      i::::i                                                                                          d::::::d                   A:::A                    ttt:::t                ttt:::t                                                k::::::k
     D:::::::::::::::DD     iiii                                                                                           d::::::d                  A:::::A                   t:::::t                t:::::t                                                k::::::k
     DDD:::::DDDDD:::::D                                                                                                   d:::::d                  A:::::::A                  t:::::t                t:::::t                                                k::::::k
